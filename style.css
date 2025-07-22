@@ -1,7 +1,7 @@
 body {
     margin: 0px;
     padding: 0;
-    background-image: url('../Cover/Front_cover.png');
+    background-image: url('./Front_cover.png');
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -134,7 +134,7 @@ p {
 }
 
 #MapCell {
-    background-image: url("../Maps/Thundervale.svg");
+    background-image: url("./Thundervale.svg");
 }
 
 #PeekCell {
