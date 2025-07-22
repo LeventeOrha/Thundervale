@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Verseny a végsőkig</title>
+    <link rel="icon" type="image/x-icon" href="./icon.png">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div id="header">
+        <div id="titleBar">
+            <div id="title">
+                Verseny a végsőkig
+            </div>
+            <div id="langs">
+                <a href="hu.html">HU</a>
+                <a href="en.html">EN</a>
+            </div>
+        </div>
+        <div id="menuBar">
+            <button type="button" id="BtHome" class="HdrBt">Kezdőlap</button>
+            <button type="button" id="BtMap" class="HdrBt">Térkép</button>
+            <button type="button" id="BtChars" class="HdrBt">Szereplők</button>
+            <button type="button" id="BtPeek" class="HdrBt">Olvasás</button>
+            <button type="button" id="BtBuy" onclick="location.href='http://www.google.com'" class="HdrBt">Vásárlás</button>
+            <button type="button" id="BtBlog" onclick="location.href='blog_hu.html'" class="HdrBt">Blog</button>
+        </div>
+    </div>
+
+    <!-- Home page -->
+    <div id="homePage" class="main">
+        <div class="welcomeTxt">
+            <h1>Üdvözlet!</h1>
+            <p>Liam kettős életet él - nappal szerelő, éjjel viszont autóversenyző, a legjobb a környéken. 
+            Amikor a teljesítményét látja a világ legnagyobb versenyzési központjának egyik vezetője, 
+            meghívja, hogy vegyen részt az idei selejtezőn. Liam tehát összepakolja az életét és útnak indul, 
+            hogy beteljesítse az álmát - versenyezni Thundervale-ben. </p>
+            <p>A vonyítás egyre hangosabb lesz,</p>
+            <p>A kaparászás egyre erősebb, mígnem</p>
+            <p>A főnyeremény már nem holmi pénz.</p>
+            <p>Hanem maga az élet.</p>
+        </div>
+        <div class="grid">
+            <div id="leftCol" class="Col">
+                <button class="cell bigCell" id="MapCell">
+                    <p><b>Térkép</b></p>
+                    <p>Fedezt fel Thundervale-t!</p>
+                </button>
+                <button class="cell smallCell" id="CharCell">
+                    <p><b>Szereplők</b></p>
+                    <p>Ismerd meg a szereplőket!</p>
+                </button>
+            </div>
+            <div id="rightCol" class="Col">
+                <button class="cell smallCell" id="PeekCell">
+                    <p><b>Beleolvasás</b></p>
+                    <p>Olvasd el az első fejezeteket most!</p>
+                </button>
+                <button class="cell bigCell" id="BuyCell" onclick="location.href='http://www.google.com'">
+                    <p><b>Vásárlás</b></p>
+                    <p>Vedd meg a könyvet most!</p>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Map -->
+    <div class="main hidden" id="mapPage">
+        <div class="map-container">
+            <div class="map-wrapper">
+                <img src="../Maps/Thundervale.svg" alt="Thundervale" usemap="#thundervalemap" width="100%" class="map-image">
+                <map name="thundervalemap">
+                    <area shape="rect" coords="345, 147, 412, 167" alt="SanFrente" data-html='
+                    <div class="tooltip-content">
+                        <img src="">
+                        <h3>San Frente</h3>
+                        Thundervale fővárosa, tele szórakozási lehetőségekkel és hotelekkel.
+                    </div>'> <!-- San Frente -->
+                    <area shape="rect" coords="250, 330, 320, 352" alt="PortSuerte" data-html='
+                    <div class="tooltip-content">
+                        <img src="">
+                        <h3>Port Suerte</h3>
+                        Kis kikötőváros, innen indul a komp Isla Bora-ra. 
+                    </div>'> <!-- Port Suerte -->
+                    <area shape="rect" coords="470, 212, 525, 230" alt="Temecule" data-html='
+                    <div class="tooltip-content">
+                        <img src="">
+                        <h3>Temecule</h3>
+                        A Naya tó partján fekszik a völgy második legnagyobb városa, szintén szórakozásra építve.
+                    </div>'> <!-- Temecule -->
+                    <area shape="rect" coords="573, 460, 635, 480" alt="Newcastle" data-html='
+                    <div class="tooltip-content">
+                        <img src="">
+                        <h3>Newcaslte</h3>
+                        Kényelmes kisváros, Tia néni vendégházával.
+                    </div>'> <!-- Newcastle -->
+                    <area shape="rect" coords="798, 257, 822, 277" alt="HQ" data-html='
+                    <div class="tooltip-content">
+                        <img src="">
+                        <h3>HQ</h3>
+                        Az agy, a központból irányítják a völgybéli eseményeket.
+                    </div>'> <!-- HQ -->
+                    <area shape="rect" coords="835, 185, 900, 205" alt="Heartforge" data-html='
+                    <div class="tooltip-content">
+                        <img src="">
+                        <h3>Heartforge</h3>
+                        Apró városka, mindössze pár utcával, viszont meglehetősen szűk kanyarokkal.
+                    </div>'> <!-- Heartforge -->
+                    <area shape="rect" coords="1010, 490, 1060, 505" alt="Arville" data-html='
+                    <div class="tooltip-content">
+                        <img src="">
+                        <h3>Arville</h3>
+                        A thundervale-iek többségének otthona, kissé elszigetelve a völgy többi részétől.
+                    </div>'> <!-- Arville -->
+                    <area shape="rect" coords="1075, 247, 1132, 267" alt="PortRapid" data-html='
+                    <div class="tooltip-content">
+                        <img src="">
+                        <h3>Port Rapid</h3>
+                        <i>A Sebesség Kapuja</i>, Thundervale bejárata, erősen őrzött a biztonság érdekében.
+                    </div>'> <!-- Port Rapid -->
+                </map>
+            </div>
+            <div id="tooltip" class="tooltip hidden"></div>
+        </div>
+    </div>
+
+    <!-- Characters -->
+    <div class="main hidden" id="charPage">
+        <div class="charList">
+            <div class="char">
+                <div class="charImg">
+                    <img src="../Characters/Liam_thin.png" class="CharImg">
+                </div>
+                <div class="charDesc">
+                    <h2>Liam</h2>
+                    <p>
+                        Nappal csupán egy szerelő, éjjel viszont a környék legjobb versenyzője, 
+                        ami lehetőséget szerez neki, hogy Thundervale-ben versenyezzen.
+                    </p>
+                </div>
+            </div>
+            <div class="char">
+                <div class="charImg">
+                    <img src="../Characters/Camil_thin.png" class="CharImg">
+                </div>
+                <div class="charDesc">
+                    <h2>Camil</h2>
+                    <p>
+                        Az egyetemi tanulmányai miatt versenyeket rendez, ahol megismerte Liam-et,
+                        akibe azonnal beleszeretett.
+                    </p>
+                </div>
+            </div>
+            <div class="char">
+                <div class="charDesc">
+                    <h2>Milan</h2>
+                    <p>
+                        Az Európából érkezett titokzatos zseni a völgy leghíresebb versenyzője lett.
+                        A hírneve és vagyona ellenére is szívesen ismerkedik meg az új sofőrökkel.
+                    </p>
+                </div>
+                <div class="charImg">
+                    <img src="../Characters/Milan_thin.png" class="CharImg">
+                </div>
+            </div>
+            <div class="char">
+                <div class="charDesc">
+                    <h2>Leah</h2>
+                    <p>
+                        A szarkasztikus és kemény stílusa jól fog jönni, ha piszkálódókat kell lerendezni,
+                        vagy új barákotat szeretne szerezni.
+                    </p>
+                </div>
+                <div class="charImg">
+                    <img src="../Characters/Leah_thin.png" class="CharImg">
+                </div>
+            </div>
+            <div class="char">
+                <div class="charImg">
+                    <img src="../Characters/Alex_thin.png" class="CharImg">
+                </div>
+                <div class="charDesc">
+                    <h2>Alex</h2>
+                    <p>
+                        A fekete unalmas. De fekete lilával és kékkel megspékelve? Alex már itt is van!
+                        A Ford Fiestájával semmilyen verseny sem megnyerhetetlen, különösen, ha földutak is vannak.
+                    </p>
+                </div>
+            </div>
+            <div class="char">
+                <div class="charImg">
+                    <img src="../Characters/Christian_thin.png" class="CharImg">
+                </div>
+                <div class="charDesc">
+                    <h2>Christian</h2>
+                    <p>
+                        A magas, izmos alkat és a hideg, zárkózott arc egy kedves, szerethető lelket takar. 
+                        Mindössze kitartónak kell lenni és mellette lenni.
+                    </p>
+                </div>
+            </div>
+            <div class="char">
+                <div class="charDesc">
+                    <h2>Daphne</h2>
+                    <p>
+                        Verseny stílussal, ez Daphne mottója. Nem mindenki szereti a fehéret és a rózsaszínt,
+                        de jól mennek együtt, valamint minden más egyébbel is.
+                    </p>
+                </div>
+                <div class="charImg">
+                    <img src="../Characters/Daphne_thin.png" class="CharImg">
+                </div>
+            </div>
+            <div class="char">
+                <div class="charDesc">
+                    <h2>Mochi</h2>
+                    <p>
+                        Egy autó alatt egy esős napon találta meg Milan ezt az árva kiscicát, 
+                        akit felnevelt minden szeretetet megadva neki, amit csak tudott.
+                    </p>
+                </div>
+                <div class="charImg">
+                    <img src="../Characters/Mochi_thin.png" class="CharImg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Peek -->
+    <div class="main hidden" id="peekPage">
+        <div class="pdf-container">
+            <iframe
+            id="peekPDF"
+            src="../Verseny_a_vegsokig_preview.pdf#toolbar=0"
+            width="900px"
+            height="700px"
+            style="border:none"
+            title="Race to destiny peek"
+            ></iframe>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
