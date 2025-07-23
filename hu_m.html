@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_m.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Verseny a végsőkig</title>
+    <link rel="icon" type="image/x-icon" href="./icon.png">
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">Verseny a végsőkig</div>
+        <div class="menu-icon" id="menuToggle" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav class="dropdown" id="menu">
+            <button class="HdrBt" id="BtHome">Kezdőlap</button>
+            <button class="HdrBt" id="BtMap">Térkép</button>
+            <button class="HdrBt" id="BtChars">Karakterek</button>
+            <button class="HdrBt" id="BtPeek">Beleolvasás</button>
+            <button class="HdrBt" id="BtBuy" onclick="location.href='https://google.com'">Vásárlás</button>
+            <button class="HdrBt" id="BtBlog" onclick="location.href='blog_hu.html'">Blog</button>
+            <div class="languages">
+                <a href="hu_m.html">HU</a>
+                <a href="en_m.html">EN</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Home page -->
+    <div class="main" id="homePage">
+        <div class="welcomeTxt">
+            <h1>Üdvözlet!</h1>
+            <p>Liam kettős életet él - nappal szerelő, éjjel viszont autóversenyző, a legjobb a környéken. 
+            Amikor a teljesítményét látja a világ legnagyobb versenyzési központjának egyik vezetője, 
+            meghívja, hogy vegyen részt az idei selejtezőn. Liam tehát összepakolja az életét és útnak indul, 
+            hogy beteljesítse az álmát - versenyezni Thundervale-ben. </p>
+            <p>A vonyítás egyre hangosabb lesz,</p>
+            <p>A kaparászás egyre erősebb, mígnem</p>
+            <p>A főnyeremény már nem holmi pénz.</p>
+            <p>Hanem maga az élet.</p>
+        </div>
+        <div class="navigation">
+            <button class="cell" id="MapCell">
+                <p><b>Térkép</b></p>
+                <p>Fedezt fel Thundervale-t!</p>
+            </button>
+            <button class="cell" id="CharCell">
+                <p><b>Szereplők</b></p>
+                <p>Ismerd meg a szereplőket!</p>
+            </button>
+            <button class="cell" id="PeekCell">
+                <p><b>Beleolvasás</b></p>
+                <p>Olvasd el az első fejezeteket most!</p>
+            </button>
+            <button class="cell" id="BuyCell" onclick="location.href='http://www.google.com'">
+                <p><b>Vásárlás</b></p>
+                <p>Vedd meg a könyvet most!</p>
+            </button>
+        </div>
+    </div>
+
+    <!-- Map page -->
+    <div class="main hidden" id="mapPage">
+        <div class="map-container">
+            <img src="Thundervale.svg" width="80%">
+        </div>
+        <div class="panel-list">
+            <details data-location="SanFrente">
+                <summary>San Frente</summary>
+                <img src="">
+                <p>Thundervale fővárosa, tele szórakozási lehetőségekkel és hotelekkel.</p>
+            </details>
+            <details data-location="PortSuerte" class="smooth-details">
+                <summary>Port Suerte</summary>
+                <div class="content">
+                    <img src="">
+                    <p>Kis kikötőváros, innen indul a komp Isla Bora-ra.</p>
+                </div>
+            </details>
+            <details data-location="Temecule">
+                <summary>Temecule</summary>
+                <img src="">
+                <p>A Naya tó partján fekszik a völgy második legnagyobb városa, szintén szórakozásra építve.</p>
+            </details>
+            <details data-location="Newcastle">
+                <summary>Newcastle</summary>
+                <img src="">
+                <p>Kényelmes kisváros, Tia néni vendégházával.</p>
+            </details>
+            <details data-location="HQ">
+                <summary>HQ</summary>
+                <img src="">
+                <p>Az agy, a központból irányítják a völgybéli eseményeket.</p>
+            </details>
+            <details data-location="Heartforge">
+                <summary>Heartforge</summary>
+                <img src="">
+                <p>Apró városka, mindössze pár utcával, viszont meglehetősen szűk kanyarokkal.</p>
+            </details>
+            <details data-location="Arville">
+                <summary>Arville</summary>
+                <img src="">
+                <p>A thundervale-iek többségének otthona, kissé elszigetelve a völgy többi részétől.</p>
+            </details>
+            <details data-location="PortRapid">
+                <summary>Port Rapid</summary>
+                <img src="">
+                <p><i>A Sebesség Kapuja</i>, Thundervale bejárata, erősen őrzött a biztonság érdekében.</p>
+            </details>
+        </div>
+    </div>
+
+    <!-- Characters page -->
+    <div class="main hidden" id="charPage">
+        <div class="char">
+            <div class="charImg">
+                <img src="./Characters/Liam_thin.png" class="CharImg">
+            </div>
+            <div class="charDesc">
+                <h2>Liam</h2>
+                <p>
+                    Nappal csupán egy szerelő, éjjel viszont a környék legjobb versenyzője, 
+                    ami lehetőséget szerez neki, hogy Thundervale-ben versenyezzen.
+                </p>
+            </div>
+        </div>
+        <div class="char">
+            <div class="charImg">
+                <img src="./Characters/Camil_thin.png" class="CharImg">
+            </div>
+            <div class="charDesc">
+                <h2>Camil</h2>
+                <p>
+                    Az egyetemi tanulmányai miatt versenyeket rendez, ahol megismerte Liam-et,
+                    akibe azonnal beleszeretett.
+                </p>
+            </div>
+        </div>
+        <div class="char">
+            <div class="charImg">
+                <img src="./Characters/Milan_thin.png" class="CharImg">
+            </div>
+            <div class="charDesc">
+                <h2>Milan</h2>
+                <p>
+                    Az Európából érkezett titokzatos zseni a völgy leghíresebb versenyzője lett.
+                    A hírneve és vagyona ellenére is szívesen ismerkedik meg az új sofőrökkel.
+                </p>
+            </div>
+        </div>
+        <div class="char">
+            <div class="charImg">
+                <img src="./Characters/Leah_thin.png" class="CharImg">
+            </div>
+            <div class="charDesc">
+                <h2>Leah</h2>
+                <p>
+                    A szarkasztikus és kemény stílusa jól fog jönni, ha piszkálódókat kell lerendezni,
+                    vagy új barákotat szeretne szerezni.
+                </p>
+            </div>
+        </div>
+        <div class="char">
+            <div class="charImg">
+                <img src="./Characters/Alex_thin.png" class="CharImg">
+            </div>
+            <div class="charDesc">
+                <h2>Alex</h2>
+                <p>
+                    A fekete unalmas. De fekete lilával és kékkel megspékelve? Alex már itt is van!
+                    A Ford Fiestájával semmilyen verseny sem megnyerhetetlen, különösen, ha földutak is vannak.
+                </p>
+            </div>
+        </div>
+        <div class="char">
+            <div class="charImg">
+                <img src="./Characters/Christian_thin.png" class="CharImg">
+            </div>
+            <div class="charDesc">
+                <h2>Christian</h2>
+                <p>
+                    A magas, izmos alkat és a hideg, zárkózott arc egy kedves, szerethető lelket takar. 
+                    Mindössze kitartónak kell lenni és mellette lenni.
+                </p>
+            </div>
+        </div>
+        <div class="char">
+            <div class="charImg">
+                <img src="./Characters/Daphne_thin.png" class="CharImg">
+            </div>
+            <div class="charDesc">
+                <h2>Daphne</h2>
+                <p>
+                    Verseny stílussal, ez Daphne mottója. Nem mindenki szereti a fehéret és a rózsaszínt,
+                    de jól mennek együtt, valamint minden más egyébbel is.
+                </p>
+            </div>
+        </div>
+        <div class="char">
+            <div class="charImg">
+                <img src="./Characters/Mochi_thin.png" class="CharImg">
+            </div>
+            <div class="charDesc">
+                <h2>Mochi</h2>
+                <p>
+                    Egy autó alatt egy esős napon találta meg Milan ezt az árva kiscicát, 
+                    akit felnevelt minden szeretetet megadva neki, amit csak tudott.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Peek page -->
+    <div class="main hidden" id="peekPage">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./pdf_images/page-0.png" alt="Preview 1" /></div>
+                <div class="swiper-slide"><img src="./pdf_images/page-1.png" alt="Preview 2" /></div>
+                <div class="swiper-slide"><img src="./pdf_images/page-2.png" alt="Preview 3" /></div>
+                <div class="swiper-slide"><img src="./pdf_images/page-3.png" alt="Preview 4" /></div>
+                <div class="swiper-slide"><img src="./pdf_images/page-4.png" alt="Preview 5" /></div>
+                <div class="swiper-slide"><img src="./pdf_images/page-5.png" alt="Preview 6" /></div>
+                <div class="swiper-slide"><img src="./pdf_images/page-6.png" alt="Preview 7" /></div>
+                <div class="swiper-slide"><img src="./pdf_images/page-7.png" alt="Preview 8" /></div>
+                <div class="swiper-slide"><img src="./pdf_images/page-8.png" alt="Preview 9" /></div>
+                <div class="swiper-slide"><img src="./pdf_images/page-9.png" alt="Preview 10" /></div>
+                <div class="swiper-slide"><img src="./pdf_images/page-10.png" alt="Preview 11" /></div>
+            </div>
+        </div>
+        <script>
+            const swiper = new Swiper('.swiper', {
+                loop: false, // enables looping
+                pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+                },
+                navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+                },
+                // Optional: customize speed, slides per view, etc.
+                speed: 600,
+                spaceBetween: 20
+            });
+        </script>
+
+    </div>
+
+    <script src="script_m.js"></script>
+
+</body>
