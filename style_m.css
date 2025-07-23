@@ -138,11 +138,23 @@ header {
     padding: 5px;
 }
 
+#homePage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .navigation {
     width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.navCells {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .cell {
@@ -175,7 +187,7 @@ header {
 }
 
 #BuyCell {
-    background-image: url("./Amazon_logo.svg");
+    background-image: url("");
 }
 
 /* Map page */
@@ -217,6 +229,7 @@ details {
     border: 2px solid #999;
     border-radius: 5px;
     color: black;
+    margin: 2px;
 }
 
 details summary {
@@ -240,8 +253,8 @@ details[open] .content {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 500px;
-    height: 150px;
+    width: 300px;
+    height: 200px;
     color: black;
     background-color: rgba(211, 211, 211, 0.8);
     margin: 10px;
