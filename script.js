@@ -21,6 +21,23 @@ document.querySelectorAll("area").forEach(area => {
   });
 });
 
+let preventExit = true;
+
+function handleBackPress() {
+    if (preventExit) {
+        switchTab("homePage")
+        // Push state again to intercept further
+        history.pushState(null, null, location.href);
+    }
+}
+
+window.addEventListener("load", () => {
+    history.pushState(null, null, location.href); // Push dummy state
+    window.addEventListener("popstate", (event) => {
+        handleBackPress();
+    });
+});
+
 window.onload = () => {
     document.getElementById('BtHome').onclick = () => switchTab("homePage");
     document.getElementById('BtMap').onclick = () => switchTab("mapPage");
