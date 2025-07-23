@@ -1,19 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Redirecting...</title>
   <script>
+    // Detect browser language
     const lang = navigator.language || navigator.userLanguage;
+    let newlang = lang.startsWith('hu') ? 'hu' : 'en';
 
-    if (lang.startsWith('hu')) {
-      window.location.href = 'hu.html';
-    } else {
-      window.location.href = 'en.html'; // default to English
-    }
+    // Detect mobile device
+    const isMobile = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const suffix = isMobile ? '_m' : '';
+
+    // Redirect
+    window.location.href = `${newlang}${suffix}.html`;
   </script>
+  <style>
+    body {
+      margin: 0px;
+      padding: 0;
+      background-image: url('./Front_cover.png');
+      background-attachment: fixed;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    p {
+      background-color: rgba(211, 211, 211, 0.8);
+      border: 2px solid #999;
+      border-radius: 5px;
+      color: black;
+      padding: 10px;
+    }
+  </style>
 </head>
 <body>
-  <p>Redirecting based on your browser language...</p>
+  <p>Redirecting... (Please, wait)</p>
 </body>
 </html>
