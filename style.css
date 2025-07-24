@@ -201,6 +201,19 @@ p {
   padding: 2px;
 }
 
+.tooltip-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 250px;
+  text-align: center;
+}
+
+.tooltip-content img {
+    width: 90%;
+    border-radius: 5px;
+}
 
 .tooltip h3 {
     margin-bottom: 3px;
