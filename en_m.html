@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_m.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Race to destiny</title>
+    <link rel="icon" type="image/x-icon" href="./icon.png">
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">Race to destiny</div>
+        <div class="menu-icon" id="menuToggle" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav class="dropdown" id="menu">
+            <button class="HdrBt" id="BtHome">Home</button>
+            <button class="HdrBt" id="BtMap">Map</button>
+            <button class="HdrBt" id="BtChars">Characters</button>
+            <button class="HdrBt" id="BtPeek">Peek</button>
+            <button class="HdrBt" id="BtBuy" onclick="location.href='https://google.com'">Buy</button>
+            <button class="HdrBt" id="BtBlog" onclick="location.href='blog_hu.html'">Blog</button>
+            <div class="languages">
+                <a href="hu_m.html">HU</a>
+                <a href="en_m.html">EN</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Home page -->
+    <div class="main" id="homePage">
+        <div class="welcomeTxt">
+            <h1>Welcome!</h1>
+            <p>
+                Liam lives a double life - mechanic in the daytime, but a racer during the night, the best in town.
+                When his performance is seen by a head of the world's largest racing place, she invites him,
+                to take part in this year's qualifications. So Liam packs his life and hits the road, to fulfill his dream 
+                - racing in Thundervale.
+            </p>
+            <p>Howling is louder,</p>
+            <p>Scratching is stronger, unless</p>
+            <p>The award is not some money</p>
+            <p>But life itself.</p>
+        </div>
+        <div class="navigation">
+            <div class="navCells">
+                <button class="cell" id="MapCell">
+                    <p><b>Map</b></p>
+                    <p>Explore Thundervale in more detail!</p>
+                </button>
+                <button class="cell" id="CharCell">
+                    <p><b>Charaters</b></p>
+                    <p>Get to know the characters!</p>
+                </button>
+                <button class="cell" id="PeekCell">
+                    <p><b>Peek</b></p>
+                    <p>Take a peek into the book!</p>
+                </button>
+                <button class="cell" id="BuyCell" onclick="location.href='http://www.google.com'">
+                    <p><b>Buy</b></p>
+                    <p>Buy the whole book on Amazon!</p>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Map page -->
+    <div class="main hidden" id="mapPage">
+        <div class="map-container">
+            <img src="Thundervale.svg" width="80%">
+        </div>
+        <div class="panel-list">
+            <details data-location="SanFrente">
+                <summary>San Frente</summary>
+                <img src="./Scenes/SanFrente.png">
+                <p>Capital of Thundervale, filled with hotels and fun.</p>
+            </details>
+            <details data-location="PortSuerte" class="smooth-details">
+                <summary>Port Suerte</summary>
+                <div class="content">
+                    <img src="">
+                    <p>Small town with a harbor, with ferries to Isla Bora.</p>
+                </div>
+            </details>
+            <details data-location="Temecule">
+                <summary>Temecule</summary>
+                <img src="">
+                <p>On the edge of Lake Naya lies the second biggest city of the valley, also built to please visitors.</p>
+            </details>
+            <details data-location="Newcastle">
+                <summary>Newcastle</summary>
+                <img src="">
+                <p>Cozy town, with the guesthouse of Aunt Tia.</p>
+            </details>
+            <details data-location="HQ">
+                <summary>HQ</summary>
+                <img src="">
+                <p>The mind, the headquarters from where events are coordinated.</p>
+            </details>
+            <details data-location="Heartforge">
+                <summary>Heartforge</summary>
+                <img src="">
+                <p>Tiny village with only a few streets, but particularly sharp turns.</p>
+            </details>
+            <details data-location="Arville">
+                <summary>Arville</summary>
+                <img src="">
+                <p>The home of most people living in Thundervale, a bit isolated from the rest of the valley.</p>
+            </details>
+            <details data-location="PortRapid">
+                <summary>Port Rapid</summary>
+                <img src="">
+                <p><i>The Gate of Speed</i>, entrance to Thundervale, highly guarded for safety.</p>
+            </details>
+        </div>
+    </div>
+
+    <!-- Characters page -->
+    <div class="main hidden" id="charPage">
+        <div class="char">
+            <div class="charImg">
+                <img src="./Characters/Liam_thin.png" class="CharImg">
+            </div>
+            <div class="charDesc">
+                <h2>Liam</h2>
+                <p>
+                    In the daytime, just a mechanic, but during the night, he is the best racer in town, 
+                    getting him the chance to participate in Thundervale.
+                </p>
+            </div>
+        </div>
+        <div class="char">
+            <div class="charImg">
+                <img src="./Characters/Camil_thin.png" class="CharImg">
+            </div>
+            <div class="charDesc">
+                <h2>Camil</h2>
+                <p>
+                    Her university studies led her to organize races, where she met Liam,
+                    the guy she immediately fell in love with.
+                </p>
+            </div>
+        </div>
+        <div class="char">
+            <div class="charImg">
+                <img src="./Characters/Milan_thin.png" class="CharImg">
+            </div>
+            <div class="charDesc">
+                <h2>Milan</h2>
+                <p>
+                    The mysterios genius, coming from Europe, became the most well-know racer in the valley.
+                    Despite his fame and wealth, he is happy to get to know the new drivers.
+                </p>
+            </div>
+        </div>
+        <div class="char">
+            <div class="charImg">
+                <img src="./Characters/Leah_thin.png" class="CharImg">
+            </div>
+            <div class="charDesc">
+                <h2>Leah</h2>
+                <p>
+                    The sarcastic and strong style of hers will definitely come in handy, 
+                    when it comes to scaring off jerks and making new friends as well.
+                </p>
+            </div>
+        </div>
+        <div class="char">
+            <div class="charImg">
+                <img src="./Characters/Alex_thin.png" class="CharImg">
+            </div>
+            <div class="charDesc">
+                <h2>Alex</h2>
+                <p>
+                    Black is boring. But black with purple and blue? Sign Alex up! 
+                    With their Ford Fiesta, no race is unwinnabe, especially when dirt roads are included.
+                </p>
+            </div>
+        </div>
+        <div class="char">
+            <div class="charImg">
+                <img src="./Characters/Christian_thin.png" class="CharImg">
+            </div>
+            <div class="charDesc">
+                <h2>Christian</h2>
+                <p>
+                    The tall, muscular shape and cold, closed face hides a soft, lovable personality.
+                    All one needs to do is to be persistent and keep on going on talking.
+                </p>
+            </div>
+        </div>
+        <div class="char">
+            <div class="charImg">
+                <img src="./Characters/Daphne_thin.png" class="CharImg">
+            </div>
+            <div class="charDesc">
+                <h2>Daphne</h2>
+                <p>
+                    Racing with style, that is Daphne's motto. Not everyone likes white and pink, 
+                    but they go pretty well together and with everything else.
+                </p>
+            </div>
+        </div>
+        <div class="char">
+            <div class="charImg">
+                <img src="./Characters/Mochi_thin.png" class="CharImg">
+            </div>
+            <div class="charDesc">
+                <h2>Mochi</h2>
+                <p>
+                    Found lonely under a car on a rainy day, Milan adopted this poor little kitty, 
+                    then raised her with all love he could give. 
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Peek page -->
+    <div class="main hidden" id="peekPage">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./pdf_images/page-0.png" alt="Preview 1" /></div>
+                <div class="swiper-slide"><img src="./pdf_images/page-1.png" alt="Preview 2" /></div>
+                <div class="swiper-slide"><img src="./pdf_images/page-2.png" alt="Preview 3" /></div>
+                <div class="swiper-slide"><img src="./pdf_images/page-3.png" alt="Preview 4" /></div>
+                <div class="swiper-slide"><img src="./pdf_images/page-4.png" alt="Preview 5" /></div>
+                <div class="swiper-slide"><img src="./pdf_images/page-5.png" alt="Preview 6" /></div>
+                <div class="swiper-slide"><img src="./pdf_images/page-6.png" alt="Preview 7" /></div>
+                <div class="swiper-slide"><img src="./pdf_images/page-7.png" alt="Preview 8" /></div>
+                <div class="swiper-slide"><img src="./pdf_images/page-8.png" alt="Preview 9" /></div>
+                <div class="swiper-slide"><img src="./pdf_images/page-9.png" alt="Preview 10" /></div>
+                <div class="swiper-slide"><img src="./pdf_images/page-10.png" alt="Preview 11" /></div>
+            </div>
+        </div>
+        <script>
+            const swiper = new Swiper('.swiper', {
+                loop: false, // enables looping
+                pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+                },
+                navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+                },
+                // Optional: customize speed, slides per view, etc.
+                speed: 600,
+                spaceBetween: 20
+            });
+        </script>
+
+    </div>
+
+    <script src="script_m.js"></script>
+
+</body>
