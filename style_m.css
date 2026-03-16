@@ -187,7 +187,9 @@ header {
 }
 
 #BuyCell {
-    background-image: url("");
+    background-image: url("./Patreon-Logo_m.jpg");
+    background-size: contain;
+    background-color: white;
 }
 
 /* Map page */
